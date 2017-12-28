@@ -4441,12 +4441,13 @@ CalenStyle.prototype = {
 					iLoadNextYear = iArrLoadNext[1],
 					iLoadNextMonthDays = to.__getNumberOfDaysOfMonth(iLoadNextMonth, iLoadNextYear);
 
-					if($.cf.compareStrings(to.tv.sLoadType, "Load") || $.cf.compareStrings(to.setting.datasetModificationRule, "ReplaceAll"))
-					{
+					// if($.cf.compareStrings(to.tv.sLoadType, "Load") || $.cf.compareStrings(to.setting.datasetModificationRule, "ReplaceAll"))
+					// {
 						dLoadStartDate = to.setDateInFormat({"iDate": {d: 1, M: iLoadPrevMonth, y: iLoadPrevYear}}, "START");
 						dLoadEndDate = to.setDateInFormat({"iDate": {d: iLoadNextMonthDays, M: iLoadNextMonth, y: iLoadNextYear}}, "END");
 						dDurationStartDate = dLoadStartDate;
 						dDurationEndDate = dLoadEndDate;
+					/*
 					}
 					else if($.cf.compareStrings(to.tv.sLoadType, "Prev"))
 					{
@@ -4462,6 +4463,7 @@ CalenStyle.prototype = {
 						dDurationStartDate = to.setDateInFormat({"iDate": {d: 1, M: iLoadPrevMonth, y: iLoadPrevYear}}, "START");
 						dDurationEndDate = new Date(dLoadEndDate);
 					}
+					*/
 				}
 			}
 
